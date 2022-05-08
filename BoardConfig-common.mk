@@ -142,6 +142,7 @@ SOONG_CONFIG_arm_gralloc_gralloc_ion_sync_on_lock := $(BOARD_USES_GRALLOC_ION_SY
 # Graphics
 #BOARD_USES_EXYNOS_DATASPACE_FEATURE := true
 
+
 # Enable chain partition for system.
 BOARD_AVB_VBMETA_SYSTEM := system system_ext product
 BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
@@ -258,6 +259,9 @@ BOARD_LIBACRYL_G2D_HDR_PLUGIN := libacryl_hdr_plugin
 
 # HWCServices
 BOARD_USES_HWC_SERVICES := true
+
+# HWUI
+HWUI_COMPILE_FOR_PERF := true
 
 # WiFiDisplay
 # BOARD_USES_VIRTUAL_DISPLAY := true
