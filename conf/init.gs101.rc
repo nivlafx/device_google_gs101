@@ -856,6 +856,18 @@ on post-fs-data
     mkdir /data/vendor/powerstats 0771 system system
     chown system system /data/vendor/powerstats
 
+#  Kernel custom settings
+on post-fs-data
+    write /sys/kernel/vendor_sched/util_threshold 1280
+    write /sys/kernel/vendor_sched/ta_uclamp_min 1
+    write /sys/kernel/vendor_sched/sf_uclamp_min 65
+    write /sys/kernel/vendor_sched/nnapi_uclamp_min 154
+    write /sys/kernel/vendor_sched/cam_prefer_idle 1
+    write /sys/kernel/vendor_sched/ta_prefer_high_cap 0
+    write /sys/kernel/vendor_sched/ta_prefer_idle 1
+    write /sys/kernel/vendor_sched/cam_prefer_high_cap 0
+    write /sys/kernel/vendor_sched/high_capacity_start_cpu 6
+
 on property:vendor.thermal.link_ready=1
     # BCL
     write /sys/devices/virtual/pmic/mitigation/clock_ratio/tpu_light_clk_ratio 0xfff041c5
