@@ -1,0 +1,17 @@
+[
+  {
+    "repository": "vendor_google_interfaces",
+    "target_path": "vendor/google/interfaces",
+    "remote": "pe-raven"
+  },
+  {
+    "repository": "device_google_gs101-sepolicy",
+    "target_path": "device/google/gs101-sepolicy",
+    "remote": "pe-raven"
+  },
+  {
+    "repository": "bicet/pe_vendor_google_pixelparts",
+    "target_path": "vendor/google/pixelparts",
+    "remote": "gitlab"
+  }
+]
